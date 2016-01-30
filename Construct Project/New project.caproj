@@ -72,7 +72,18 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6196682415089652" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\ggj16\Construct Project\Files\circle.png">
+                        <collision-poly>
+                            <point x="0.12" y="0.14" />
+                            <point x="0.42" y="0.00999999" />
+                            <point x="0.82" y="0.1" />
+                            <point x="1" y="0.51" />
+                            <point x="0.86" y="0.84" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12" y="0.84" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
