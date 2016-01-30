@@ -43,5 +43,41 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="6189074345859253">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4477150969551329" type="spr_wave">
+                    <param id="0" name="Object">spr_metronome_marker</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="5829320976977088" type="Audio">
+                    <param id="0" name="Audio file">250552__druminfected__metronome</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;note&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7315444427162581">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6558229655017357" type="spr_metronome_marker">
+                            <param id="0" name="Instance variable">isLast</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6826296938588824" type="System">
+                            <param id="0" name="Variable">isLoop</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="4856176297828869" type="spr_wavegenerator">
+                            <param id="0" name="Object">spr_wave</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
