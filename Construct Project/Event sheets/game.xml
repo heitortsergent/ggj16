@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>game</name>
     <events>
+        <variable constant="0" name="waveGrowthSpeed" sid="2670308442103418" static="0" type="number">900</variable>
         <variable constant="0" name="loop" sid="9010368129777731" static="0" type="number">0</variable>
         <include>audio</include>
         <event-block sid="8848471237484072">
@@ -73,19 +74,23 @@
             </conditions>
             <actions>
                 <action id="-7" name="Set size" sid="9861207960399236" type="spr_wave">
-                    <param id="0" name="Width">Self.Width+15</param>
-                    <param id="1" name="Height">Self.Height+15</param>
+                    <param id="0" name="Width">Self.Width+(waveGrowthSpeed * dt)</param>
+                    <param id="1" name="Height">Self.Height+(waveGrowthSpeed * dt)</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="1813906090678498" type="spr_wave">
-                    <param id="0" name="Opacity">Self.Opacity-5</param>
+                    <param id="0" name="Opacity">Self.Opacity-(90 * dt)</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="5019954274171634">
             <conditions>
                 <condition id="-5" name="Compare width" sid="8951370748990731" type="spr_wave">
-                    <param id="0" name="Comparison">5</param>
-                    <param id="1" name="Width">LayoutWidth</param>
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Width">LayoutWidth+(LayoutWidth/4)</param>
+                </condition>
+                <condition id="-6" name="Compare height" sid="5268312626789651" type="spr_wave">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Height">LayoutHeight</param>
                 </condition>
             </conditions>
             <actions>
