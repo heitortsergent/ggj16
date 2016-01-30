@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>audio</name>
+    <events>
+        <event-block sid="8026401431489693">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4561585001674989" type="spr_wave">
+                    <param id="0" name="Object">spr_note</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5480736560716049">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3779649893896193" type="spr_note">
+                            <param id="0" name="Instance variable">Variable1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="6992595285466686" type="Audio">
+                            <param id="0" name="Audio file">171104__dwsd__kick-gettinglaid.wav</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;note&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5085491101125973">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5602440764627659" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1981175816271268" type="Audio">
+                            <param id="0" name="Audio file">DM-CGS-24</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;note&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

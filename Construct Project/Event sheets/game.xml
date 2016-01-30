@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>game</name>
+    <events>
+        <variable constant="0" name="loop" sid="9010368129777731" static="0" type="number">0</variable>
+        <include>audio</include>
+        <event-block sid="8848471237484072">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1894340942931707" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9169899986027723" type="spr_wave" />
+            </actions>
+        </event-block>
+        <event-block sid="5877129531251784">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4401424446478823" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">spr_wavegenerator</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="3725071078317916" type="spr_wavegenerator">
+                    <param id="0" name="Object">spr_wave</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2913681889086164">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5400568909379534" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">spr_loop</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9548571321474719">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3411996103045297" type="System">
+                            <param id="0" name="Variable">loop</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4613637613807376" type="System">
+                            <param id="0" name="Variable">loop</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6232771328866276">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6662797436506134" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3693722387232656" type="System">
+                            <param id="0" name="Variable">loop</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6871960428637658">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2005010063252036" type="System" />
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="9861207960399236" type="spr_wave">
+                    <param id="0" name="Width">Self.Width+15</param>
+                    <param id="1" name="Height">Self.Height+15</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="1813906090678498" type="spr_wave">
+                    <param id="0" name="Opacity">Self.Opacity-5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5019954274171634">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="8951370748990731" type="spr_wave">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">LayoutWidth</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="472819756978838" type="spr_wave" />
+            </actions>
+        </event-block>
+        <event-block sid="8859002261440221">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4815657068222307" type="System">
+                    <param id="0" name="Variable">loop</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="6121107768587322" type="System">
+                    <param id="0" name="First value">spr_wave.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="7928756058626578" type="spr_wavegenerator">
+                    <param id="0" name="Object">spr_wave</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
