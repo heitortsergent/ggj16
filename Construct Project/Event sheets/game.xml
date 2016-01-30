@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>game</name>
     <events>
+        <variable constant="0" name="waveOpacity" sid="1734609452181794" static="0" type="number">90</variable>
         <variable constant="0" name="waveGrowthSpeed" sid="2670308442103418" static="0" type="number">900</variable>
         <variable constant="0" name="loop" sid="9010368129777731" static="0" type="number">0</variable>
         <include>audio</include>
@@ -78,7 +79,7 @@
                     <param id="1" name="Height">Self.Height+(waveGrowthSpeed * dt)</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="1813906090678498" type="spr_wave">
-                    <param id="0" name="Opacity">Self.Opacity-(90 * dt)</param>
+                    <param id="0" name="Opacity">Self.Opacity-(waveOpacity * dt)</param>
                 </action>
             </actions>
         </event-block>
@@ -115,6 +116,31 @@
                     <param id="0" name="Object">spr_wave</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4639880614915997">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5165161511329503" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7180043129988496" type="Text">
+                    <param id="0" name="Text">waveGrowthSpeed</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3504292151801516">
+            <conditions>
+                <condition id="2" name="On changed" sid="2192058594954288" type="SliderBar" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1594014467870714" type="System">
+                    <param id="0" name="Variable">waveGrowthSpeed</param>
+                    <param id="1" name="Value">SliderBar.Value</param>
+                </action>
+                <action id="-9" name="Set value" sid="339572658572144" type="System">
+                    <param id="0" name="Variable">waveOpacity</param>
+                    <param id="1" name="Value">waveGrowthSpeed/10</param>
                 </action>
             </actions>
         </event-block>
