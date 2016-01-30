@@ -6,14 +6,14 @@
         <event-block sid="8026401431489693">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="4561585001674989" type="spr_wave">
-                    <param id="0" name="Object">spr_note</param>
+                    <param id="0" name="Object">spr_note_drumkick</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="5480736560716049">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3779649893896193" type="spr_note">
+                        <condition id="-7" name="Compare instance variable" sid="3779649893896193" type="spr_note_drumkick">
                             <param id="0" name="Instance variable">Variable1</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>

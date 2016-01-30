@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>notes</name>
+    <events>
+        <event-block sid="926936366411823">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7178261842765372" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">1</param>
+                    <param id="2" name="Object clicked">spr_note_drumkick</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="220502154001301" type="spr_note_drumkick" />
+            </actions>
+        </event-block>
+        <event-block sid="6893888348985347">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9976864313436912" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">spr_notegenerator_drumkick</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="8973195968578784" type="System">
+                    <param id="0" name="Object to create">spr_note_drumkick</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">spr_notegenerator_drumkick.X</param>
+                    <param id="3" name="Y">spr_notegenerator_drumkick.Y - (spr_note_drumkick.Height * 2)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

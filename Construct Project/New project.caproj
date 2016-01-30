@@ -46,7 +46,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="spr_note" sid="5400782443473827">
+        <object-type name="spr_note_drumkick" sid="5400782443473827">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Variable1" sid="9367755115582679" type="number" />
@@ -109,6 +109,14 @@
         <object-type name="Text" sid="2047835041387267">
             <plugin id="Text" />
         </object-type>
+        <object-type name="spr_notegenerator_drumkick" sid="8069964183774027">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4067139162545412" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -117,6 +125,7 @@
     <event-folder>
         <event-sheet>game.xml</event-sheet>
         <event-sheet>audio.xml</event-sheet>
+        <event-sheet>notes.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="6" />
