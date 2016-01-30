@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>level1</name>
+    <events>
+        <include>game</include>
+        <include>audio</include>
+        <variable constant="0" name="numElements" sid="7789293574426321" static="0" type="number">0</variable>
+        <variable constant="0" name="numCorrectElements" sid="9168815619891634" static="0" type="number">0</variable>
+        <event-block sid="8842944172296474">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7659640590592354" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7023453474472629" type="System">
+                    <param id="0" name="Variable">isLoop</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="3777568887871827" type="spr_wavegenerator">
+                    <param id="0" name="Object">spr_wave</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="26891062469145" type="System">
+                    <param id="0" name="Variable">isTutorial</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="3435051114246714" type="System">
+                    <param id="0" name="Variable">numElements</param>
+                    <param id="1" name="Value">spr_note_drumkick.Count</param>
+                </action>
+                <action id="1" name="Append text" sid="2307437984310065" type="notes_total">
+                    <param id="0" name="Text">numElements</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6170257608099192">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3724661714650961" type="spr_wave">
+                    <param id="0" name="Object">spr_metronome_marker</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="1313825857936588" type="spr_metronome_marker">
+                    <param id="0" name="Instance variable">isLast</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1874900109704532">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2759452523567832" type="System">
+                            <param id="0" name="Variable">isTutorial</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9586187553000441" type="System">
+                            <param id="0" name="Variable">isTutorial</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="136132866911613">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="9276807587191228" type="System">
+                                    <param id="0" name="Object">spr_note_drumkick</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="7046045359538294" type="spr_note_drumkick">
+                                    <param id="0" name="X">spr_note_drumkick.Width * 2</param>
+                                    <param id="1" name="Y">LayoutHeight - ((spr_note_drumkick.Height * numElements) + (spr_note_drumkick.Height / 2))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3415066302785985" type="System">
+                                    <param id="0" name="Variable">numElements</param>
+                                    <param id="1" name="Value">numElements - 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5319781124279761">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="2806901892673733" type="System">
+                                    <param id="0" name="Variable">numElements</param>
+                                    <param id="1" name="Value">spr_note_drumkick.Count</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1248568730973031">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1291790953037189" type="System">
+                            <param id="0" name="Variable">numCorrectElements</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">numElements</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="8985184338490477" type="System">
+                            <param id="0" name="Object to create">youwin</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6713675993123182">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3853281847845023" type="System">
+                    <param id="0" name="Variable">isTutorial</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="43799599478452" type="System">
+                    <param id="0" name="Variable">numCorrectElements</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="534846440723018">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="4639235483793434" type="System">
+                            <param id="0" name="Object">spr_note_drumkick</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4204737826731839">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="14722849531386" type="spr_note_drumkick">
+                                    <param id="0" name="Instance variable">isCorrect</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="9656833311657226" type="System">
+                                    <param id="0" name="Variable">numCorrectElements</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6311931209278742">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="9354157543942187" type="notes_correct">
+                                    <param id="0" name="Text">&quot;Correct notes: &quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="1354760079872856" type="notes_correct">
+                                    <param id="0" name="Text">numCorrectElements</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="3565626339756732">
+                            <conditions>
+                                <condition id="-21" inverted="1" name="Is between values" sid="9852834498589725" type="System">
+                                    <param id="0" name="Value">distance(spr_wavegenerator.X, spr_wavegenerator.y, spr_note_drumkick.X, spr_note_drumkick.Y)</param>
+                                    <param id="1" name="Lower bound">160</param>
+                                    <param id="2" name="Upper bound">170</param>
+                                </condition>
+                                <condition id="-21" inverted="1" name="Is between values" sid="430517565068121" type="System">
+                                    <param id="0" name="Value">distance(spr_wavegenerator.X, spr_wavegenerator.y, spr_note_drumkick.X, spr_note_drumkick.Y)</param>
+                                    <param id="1" name="Lower bound">271</param>
+                                    <param id="2" name="Upper bound">281</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="8436198182272007" type="spr_note_drumkick">
+                                    <param id="0" name="Instance variable">isCorrect</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1815646565706494">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="6308040368298548" type="System">
+                            <param id="0" name="Object">spr_note_drumkick</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8458323088199516">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="2586976720207959" type="System">
+                                    <param id="0" name="Value">distance(spr_wavegenerator.X, spr_wavegenerator.y, spr_note_drumkick.X, spr_note_drumkick.Y)</param>
+                                    <param id="1" name="Lower bound">160</param>
+                                    <param id="2" name="Upper bound">170</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="4133038552643619" type="spr_note_drumkick">
+                                    <param id="0" name="Instance variable">isCorrect</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-24" name="Stop loop" sid="9110200362946878" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="313324080122034">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2095810528040805" type="System">
+                            <param id="0" name="Object">spr_note_drumkick</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="581746692037247">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="6150568526632092" type="System">
+                                    <param id="0" name="Value">distance(spr_wavegenerator.X, spr_wavegenerator.y, spr_note_drumkick.X, spr_note_drumkick.Y)</param>
+                                    <param id="1" name="Lower bound">271</param>
+                                    <param id="2" name="Upper bound">281</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="996518954203747" type="spr_note_drumkick">
+                                    <param id="0" name="Instance variable">isCorrect</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-24" name="Stop loop" sid="4001130552442067" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

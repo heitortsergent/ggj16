@@ -5,17 +5,15 @@
     <events>
         <include>notes</include>
         <include>audio</include>
-        <variable constant="0" name="waveOpacity" sid="1734609452181794" static="0" type="number">10</variable>
+        <variable constant="0" name="waveOpacity" sid="1734609452181794" static="0" type="number">15</variable>
         <variable constant="0" name="waveGrowthSpeed" sid="2670308442103418" static="0" type="number">100</variable>
         <variable constant="0" name="isLoop" sid="9010368129777731" static="0" type="number">0</variable>
-        <event-block sid="8848471237484072">
+        <variable constant="0" name="isTutorial" sid="1274594872814035" static="0" type="number">0</variable>
+        <event-block sid="2079593116861687">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="1894340942931707" type="System" />
+                <condition id="-2" name="On start of layout" sid="2230854496260548" type="System" />
             </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="9169899986027723" type="spr_wave" />
-                <action id="-9" name="Destroy" sid="9994150187658788" type="spr_note_drumkick" />
-            </actions>
+            <actions />
         </event-block>
         <event-block sid="5877129531251784">
             <conditions>

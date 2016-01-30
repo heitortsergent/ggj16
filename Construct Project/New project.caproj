@@ -29,12 +29,13 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>level1</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Construct 2 splash</prop>
         <prop name="Orientations">Any</prop>
@@ -49,7 +50,7 @@
         <object-type name="spr_note_drumkick" sid="5400782443473827">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="Variable1" sid="9367755115582679" type="number" />
+                <instance-variable name="isCorrect" sid="9367755115582679" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DragDrop" sid="2269883571500491">
@@ -58,7 +59,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869808969464325" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.32" y="2.98023e-008" />
+                            <point x="0.68" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6" y="0.66" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.0799999" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -72,6 +84,9 @@
         </object-type>
         <object-type name="spr_wave" sid="6678377763383693">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isActive" sid="7795069545678805" type="boolean" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6196682415089652" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\ggj16\Construct Project\Files\circle.png">
@@ -136,15 +151,26 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="notes_correct" sid="1004068642476174">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="notes_total" sid="629337152989813">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="youwin" sid="625420824529161">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>game.xml</layout>
+        <layout>level1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>game.xml</event-sheet>
         <event-sheet>audio.xml</event-sheet>
         <event-sheet>notes.xml</event-sheet>
+        <event-sheet>level1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="6" />

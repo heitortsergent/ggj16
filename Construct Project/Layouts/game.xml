@@ -81,7 +81,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Variable1>1</Variable1>
+                        <isCorrect>false</isCorrect>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
@@ -113,6 +113,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <isActive>true</isActive>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
