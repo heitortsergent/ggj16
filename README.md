@@ -1,1 +1,1 @@
-# ggj16
+# Global Game Jam 16The theme is "ritual".We're using Construct 2 to build our game. The idea is that there's a tribe, and you have to help them remember their lost musical rituals.
