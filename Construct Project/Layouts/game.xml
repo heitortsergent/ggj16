@@ -122,8 +122,8 @@
                         <x>1072</x>
                         <y>22</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>110</width>
+                        <height>110</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -242,8 +242,8 @@
                         <x>512</x>
                         <y>292</y>
                         <z>0</z>
-                        <width>20</width>
-                        <height>20</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -267,8 +267,8 @@
                         <x>512</x>
                         <y>235</y>
                         <z>0</z>
-                        <width>20</width>
-                        <height>20</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -292,8 +292,8 @@
                         <x>512</x>
                         <y>177</y>
                         <z>0</z>
-                        <width>20</width>
-                        <height>20</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -317,8 +317,8 @@
                         <x>512</x>
                         <y>125</y>
                         <z>0</z>
-                        <width>20</width>
-                        <height>20</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -342,8 +342,8 @@
                         <x>512</x>
                         <y>73</y>
                         <z>0</z>
-                        <width>20</width>
-                        <height>20</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

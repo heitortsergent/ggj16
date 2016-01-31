@@ -136,7 +136,18 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2214691828272033" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\ggj16\background.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="\\VBOXSVR\Windows10VM\background.png">
+                        <collision-poly>
+                            <point x="0.209961" y="0.279948" />
+                            <point x="0.5" y="0.0507813" />
+                            <point x="0.791016" y="0.278646" />
+                            <point x="0.835938" y="0.5" />
+                            <point x="0.799805" y="0.733073" />
+                            <point x="0.5" y="0.973958" />
+                            <point x="0.203125" y="0.729167" />
+                            <point x="0.166016" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

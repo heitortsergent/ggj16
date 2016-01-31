@@ -5,8 +5,8 @@
     <events>
         <include>notes</include>
         <include>audio</include>
-        <variable constant="0" name="waveOpacity" sid="1734609452181794" static="0" type="number">15</variable>
-        <variable constant="0" name="waveGrowthSpeed" sid="2670308442103418" static="0" type="number">100</variable>
+        <variable constant="0" name="waveOpacity" sid="1734609452181794" static="0" type="number">18</variable>
+        <variable constant="0" name="waveGrowthSpeed" sid="2670308442103418" static="0" type="number">120</variable>
         <variable constant="0" name="isLoop" sid="9010368129777731" static="0" type="number">0</variable>
         <variable constant="0" name="isTutorial" sid="1274594872814035" static="0" type="number">0</variable>
         <event-block sid="2079593116861687">
